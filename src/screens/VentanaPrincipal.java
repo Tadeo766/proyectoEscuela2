@@ -36,6 +36,9 @@ public class VentanaPrincipal extends JFrame{
         // Elemento de menu: Insertar
         jMenuItemInsertar = new JMenuItem();
         jMenuItemInsertar.setText("Insertar...");
+        
+        jMenuItemInsertar.addActionListener(e -> jmiInsertarAlumno());
+
         // Elemento de menu: Ver alumnos
         jMenuItemVerAlumnos = new JMenuItem();
         jMenuItemVerAlumnos.setText("Ver todos los alumnos...");
@@ -51,7 +54,6 @@ public class VentanaPrincipal extends JFrame{
         jMenuItemInsertarCarreras.setText("Insertar...");
 
         jMenuItemInsertarCarreras.addActionListener(e -> jmiInsertarCarreras());
-       
 
 
         // Agregar menuItem a menu 
@@ -76,5 +78,12 @@ public class VentanaPrincipal extends JFrame{
         insertarCarrera.setVisible(true);
     }
 
-    
+    private void jmiInsertarAlumno(){
+        JInternalFrameInsertarAlumnos insertarAlumno = new JInternalFrameInsertarAlumnos();
+        //agregar el internalframe al escritorio
+        this.desktop.add(insertarAlumno);
+        //le digo que se muestre el internal frame
+        insertarAlumno.setVisible(true);
+    }
+
 }

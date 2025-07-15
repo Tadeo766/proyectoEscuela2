@@ -86,6 +86,4 @@ public class Alumno {
     public void setPromgral(double promgral) {
         this.promgral = promgral;
     }
-
-    
 }
